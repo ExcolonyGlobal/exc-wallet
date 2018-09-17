@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+DEB_INSTALL_EXAMPLES_excolonycoind += debian/examples/*
+DEB_INSTALL_MANPAGES_excolonycoind += debian/manpages/*
+
+%:
+	dh --with bash-completion $@
+
+override_dh_auto_build:
+	cd src; $(MAKE) -f makefile.unix excolonycoind USE_ASM=1 USE_LEVELDB=1
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f excolonycoin-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake excolonycoin-qt.pro USE_ASM=1 USE_LEVELDB=1
+
+# Ensure wrapper is set executable
+binary-post-install/excolonycoind:
+	chmod +x $(cdbs_curdestdir)usr/bin/excolonycoind
+binary-post-install/excolonycoin-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/excolonycoin-qt

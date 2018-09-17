@@ -1,0 +1,2 @@
+debian/bin/excd usr/bin
+src/excd usr/lib/excolonycoin

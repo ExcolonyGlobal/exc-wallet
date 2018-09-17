@@ -1,0 +1,5 @@
+excolonycoin-qt usr/bin
+share/pixmaps/exc32.xpm usr/share/pixmaps
+share/pixmaps/exc80.xpm usr/share/pixmaps
+debian/excolonycoin-qt.desktop usr/share/applications
+debian/excolonycoin-qt.protocol usr/share/kde4/services/

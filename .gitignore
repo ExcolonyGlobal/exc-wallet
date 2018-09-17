@@ -1,0 +1,28 @@
+# sphinx build directories
+_build/
+*.pyc
+# dotfiles
+.*
+!.gitignore
+# compiled python files
+*.py[co]
+# setup.py egg_info
+*.egg-info
+# emacs backup files
+*~
+# hg stuff
+*.orig
+status
+# generated for windows installer?
+install/win32/*.bat
+install/win32/meta.py
+
+# various virtualenv
+src/.excolonycoin/*.conf
+release/*
+src/obj/*
+src/obj-test/*
+excolonycoin-qt.exe
+excolonycoin-Qt.dmg
+excolonycoind
+src/excolonycoind

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=excolonycoin
+Comment=excolonycoin P2P Cryptocurrency
+Exec=/usr/bin/excolonycoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/excolonycoin80.xpm
+MimeType=x-scheme-handler/excolonycoin;
+Categories=Office;
+Name[en_US]=excolonycoin-qt

@@ -1,0 +1,11 @@
+[Unit]
+Description=excolonycoin daemon serivce
+After=network.target
+
+[Service]
+Type=simple
+User=excolonycoin
+ExecStart=/opt/excolonycoin/excolonycoind
+
+[Install]
+WantedBy=multi-user.target
