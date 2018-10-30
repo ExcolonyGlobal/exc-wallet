@@ -19,10 +19,8 @@ install/win32/meta.py
 
 # various virtualenv
 src/.excolonycoin/*.conf
-release/*
 src/obj/*
 src/obj-test/*
-excolonycoin-qt.exe
 excolonycoin-Qt.dmg
 excolonycoind
 src/excolonycoind
